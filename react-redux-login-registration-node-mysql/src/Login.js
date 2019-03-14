@@ -27,10 +27,8 @@ class Login extends Component {
              .then(function(response){
                 console.log(response)
                 if(response.data.code == 200){
-                    console.log("Login successfull")
-                    const uploadScreen = []
-                    uploadScreen.push(<uploadScreen appContext={this.props.appContext} />)
-                    this.props.appContext.setState({loginPage: [], uploadScreen : uploadScreen})                    
+                     alert("Login Succesfuuly");
+                     console.log("Login successfull");                                    
                 }else if(response.data.code == 204){
                     console.log("Username and password do not match")
                     alert("Username and password does not match")
