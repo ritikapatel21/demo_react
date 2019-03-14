@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AppRoute from 'routes/MainRoute.js'
+import AppRoute from 'MainRoute.js'
 import Login from 'containers/Login/Login.js';
 import Registration from 'containers/Registration.js'
 import {
