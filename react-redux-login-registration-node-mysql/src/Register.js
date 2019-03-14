@@ -28,17 +28,10 @@ class Register extends Component {
             "password": this.state.password,
         }
 
-        axios.post(apiBaseUrl+'/register', payload)
+         axios.post(apiBaseUrl+'/register', payload)
              .then(function(response){
                  if(response.data.code == 200){
-                     var loginscreen = []
-                     loginscreen.push(<Login parentContext={this} />)
-                     var loginmessage = "Not Registered yet. Go to registration"
-                     this.props.parentContext.setState({
-                         loginscreen: loginscreen,
-                         buttonLabel: "Register",
-                         isLogin: true
-                     });                    
+                     alert("Register");                                
                  }
              })
              .catch(function(error){
