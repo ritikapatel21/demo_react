@@ -116,24 +116,15 @@ const LoginForm = props => {
                             ""
                           )}
                         </div>
-                        <a
+                       <a
                           style={{
                             display: "block",
-                            textAlign: "center",
+                            textAlign: "left",
                             marginTop: "10px"
                           }}
-                          href="void(0)"
-                          onClick={event => {
-                            event.preventDefault();
-                            document
-                              .getElementById("forgetForm")
-                              .classList.remove("hide");
-                            document
-                              .getElementById("loginForm")
-                              .classList.add("hide");
-                          }}
+                          href="/registration"
                         >
-                          Forget Password
+                          Registration
                         </a>
                       </div>
                     </div>
