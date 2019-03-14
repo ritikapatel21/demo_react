@@ -1,21 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
-import {
-    HashRouter,
-    Route,
-    Switch
-} from 'react-router-dom';
-
+import { BrowserRouter } from "react-router-dom";
+import App from './App';
 import store from './store/configureStore'
-import App from 'containers/Login/Login.js';
+import Login from 'containers/Login/Login.js';
+import Registration from 'containers/Registration.js'
 
-ReactDOM.render((
+ReactDOM.render(
     <Provider store={store}>
-        <HashRouter>
-            <Switch>                               
-                <Route path="/" name="Home" component={App} />
-            </Switch>
-        </HashRouter>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>
-), document.getElementById('root'));
+    , document.getElementById('root'));
+
