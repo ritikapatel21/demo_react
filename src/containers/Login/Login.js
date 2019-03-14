@@ -6,7 +6,7 @@ import { checkCookie } from "../../helpers/cookie";
 
 import * as sessionActions from "../../actions/sessionActions";
 import LoginForm from '../../components/Login/LoginForm'
-
+import Dashboard from '../../components/Dashboard/Dashboard.js';
 class Login extends Component {
     
     componentDidMount(){
@@ -20,10 +20,16 @@ class Login extends Component {
     }
 
     render() {  
-        const session = this.props.session      
-        if(checkCookie('jwt')){
-            this.props.history.push('/dashboard')
-        }
+        const session = this.props.session;
+        //console.log("fdgf", session.loggingIn);     
+        if(checkCookie('jwt')){            
+           // this.props.history.push('/dashboard')
+            return (
+                <div>
+                    <Dashboard />
+                </div>
+            )
+        }        
         return (
             <div>
                 <LoginForm onSubmit={this.onSubmit} sessiondata={session}/>
