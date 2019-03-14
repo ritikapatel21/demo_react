@@ -21,7 +21,7 @@ class App extends Component {
     const loginPage = []
     loginPage.push(<Loginscreen parentContext={this}/>)
     this.setState({
-      loginPage: loginP    })
+      loginPage: loginPage    })
   }
 
   render() {
