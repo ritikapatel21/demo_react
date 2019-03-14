@@ -1,4 +1,7 @@
 var mysql = require('mysql');
+const jwt = require("jsonwebtoken");
+const jwtsecret = "Rip123";
+const expiresIn = 86400;
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -54,10 +57,15 @@ exports.login = function(req, res){
             });
         }else{
             if(results.length > 0){
+                var token = jwt.sign({ user: results[0].email }, jwtsecret, {
+                    expiresIn: expiresIn
+                });
                 if(results[0].password == password){
                     res.send({
                         "code": 200,
-                        "success": "login successfully"
+                        "success": "login successfully",
+                        "status":"ok",
+                        "token": token                        
                     });
                 }else{
                     res.send({
