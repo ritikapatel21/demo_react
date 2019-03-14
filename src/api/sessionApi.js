@@ -23,7 +23,7 @@ class sessionApi {
         method: 'post',        
       })     
       .then(function (response) {
-        return response.json();
+         return "Logout Succesfully";;
       })
       .catch(function (error) {
         throw error;
