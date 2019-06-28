@@ -1,5 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Directories
+```
+PmProject-React#v2.0.0
+├── public/      (static files)
+│   ├── assets/    (assets)
+│   ├── favicon.ico  
+│   └── index.html (html temlpate)
+│
+├── src/             (project root)
+│   ├── containers/  (container source)
+│   ├── scss/        (scss/css source)
+│   ├── views/       (views source)
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+│   ├── _nav.js      (sidebar config)
+│   └── routes.js    (routes config)
+│
+└── package.json
+```
+
+## Usage
+`npm i` - to install dependencies
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
